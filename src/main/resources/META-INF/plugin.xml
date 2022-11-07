@@ -25,6 +25,13 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-
+        <toolWindow factoryClass="org.bakasa.devtoolsdemo.DemoToolWindowFactory"
+                    id="org.bakasa.devtoolsdemo.DemoToolWindowFactory" anchor="bottom"/>
     </extensions>
+    <actions>
+        <action id="org.bakasa.devtoolsdemo.ShowNotification" class="org.bakasa.devtoolsdemo.ShowNotification"
+                text="Show Notification" description="Show demo notification">
+            <add-to-group group-id="FileMenu" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>
